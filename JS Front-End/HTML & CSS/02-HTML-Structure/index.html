@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="logo.png" />
+        <ul>
+          <li>
+            <a href="#">Out story</a>
+          </li>
+          <li>
+            <a href="#">Membership</a>
+          </li>
+          <li>
+            <a href="#">Write</a>
+          </li>
+          <li>
+            <button>Get Started</button>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <h1>Stay curious.</h1>
+        <h2>
+          Discover stories, thinking, and expertise from writers on any topic.
+        </h2>
+        <button>Start reading</button>
+      </div>
+    </header>
+    <main>
+      <section>
+        <article>
+          <figure>
+            <img
+              width="200px"
+              src="https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445"
+              alt=""
+            />
+            <figcaption>Puppy</figcaption>
+          </figure>
+          <details>
+            <summary>Some details</summary>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et quos
+              ullam fugiat maiores magnam accusantium quo placeat eaque nam
+              corporis obcaecati doloremque, provident modi qui, beatae
+              voluptatum perferendis recusandae facere!
+            </p>
+          </details>
+          <time>10:00-17:00</time>
+          <address>
+            <a href="mailto:university@softuni.bg">university@softuni.bg</a>
+          </address>
+        </article>
+      </section>
+
+      <!-- First name - text -->
+      <!-- Last name - text -->
+      <!-- Email - text -->
+      <!-- Submit - button -->
+
+      <section>
+        <h1>Contact us</h1>
+        <form>
+          <label>
+            <p>First name:</p>
+            <input autofocus type="text" />
+          </label>
+
+          <label>
+            <p>Last Name:</p>
+            <input disabled type="text" />
+          </label>
+
+          <label>
+            <p>Your age:</p>
+            <input type="number" />
+          </label>
+
+          <label>
+            <p>Password:</p>
+            <input minlength="8" type="password" placeholder="Please write" />
+          </label>
+
+          <label for="gender">
+            <br />
+            <span>Male</span>
+            <input type="radio" name="gender" value="Male" />
+            <br />
+            <span>Female</span>
+            <input type="radio" name="gender" value="Female" />
+          </label>
+
+          <label for="job">
+            <h2>What is your job</h2>
+            <input type="checkbox" value="dev" />
+            <span>Dev</span>
+
+            <br />
+            <input type="checkbox" value="dev" />
+            <span>Manager</span>
+            <br />
+          </label>
+
+          <label>
+            <p>Email:</p>
+            <input type="email" />
+          </label>
+
+          <label>
+            <p>Your salary:</p>
+            <input type="range" />
+          </label>
+
+          <label>
+            <p>Your CV:</p>
+            <input type="file" />
+          </label>
+
+          <label for="cars">
+            <p>Cars:</p>
+            <br />
+            <select name="cars" id="cars">
+              <option value="Mercedes">Mercedes</option>
+              <option value="Audi">Audi</option>
+              <option value="Toyota">Toyota</option>
+              <option value="BMW">BMW</option>
+            </select>
+          </label>
+          <br />
+          <label for="message">
+            <p>Your message:</p>
+            <textarea
+              name="message"
+              id="message"
+              cols="50"
+              rows="10"
+            ></textarea>
+          </label>
+          <input type="submit" value="Send" />
+          <input type="reset" value="Reset" />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Praesentium iste perferendis hic inventore fugiat ut quas blanditiis
+            ipsam, deleniti tempora autem molestiae nobis debitis enim, dolores
+            veniam quae esse voluptatibus.
+          </p>
+        </form>
+      </section>
+
+      <section>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Antonia</td>
+              <td>25</td>
+            </tr>
+
+            <tr>
+              <td>Georgi</td>
+              <td>21</td>
+            </tr>
+            <tr>
+              <td>Peter</td>
+              <td>46</td>
+            </tr>
+          </tbody>
+
+          <tr>
+            <td>Average: 33</td>
+          </tr>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
