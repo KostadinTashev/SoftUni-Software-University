@@ -1,3 +1,5 @@
+CREATE DATABASE book_library;
+
 CREATE TABLE authors (
 	id serial PRIMARY KEY,
 	first_name VARCHAR(30) NOT NULL,
