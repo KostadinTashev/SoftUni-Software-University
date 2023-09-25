@@ -1,3 +1,5 @@
+CREATE DATABASE softuni_management_db;
+
 CREATE TABLE IF NOT EXISTS addresses (
   "id" SERIAL PRIMARY KEY,
   "number" INT NOT NULL,
