@@ -1,5 +1,3 @@
-CREATE DATABASE hotel;
-
 CREATE TABLE departments (
 	id serial PRIMARY KEY,
 	name VARCHAR(50)
