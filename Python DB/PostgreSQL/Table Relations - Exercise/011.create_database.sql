@@ -1,0 +1,1 @@
+CREATE DATABASE table_relations_geography_db;
