@@ -1,0 +1,1 @@
+CREATE DATABASE subqueries_joins_geography_db;
