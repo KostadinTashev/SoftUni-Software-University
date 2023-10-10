@@ -1,0 +1,1 @@
+CREATE DATABASE board_games_db;
