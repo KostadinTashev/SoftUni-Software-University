@@ -1,4 +1,4 @@
-function solve(day, age) {
+function solve(day, age){
     if (day === 'Weekday') {
         if (age >= 0 && age <= 18) {
             console.log('12$');
