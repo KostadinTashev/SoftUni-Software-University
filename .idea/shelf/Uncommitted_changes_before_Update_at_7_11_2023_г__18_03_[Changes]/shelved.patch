@@ -1,0 +1,56 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"00b58237-56e8-4150-86fd-fa4b0bb37029\" name=\"Changes\" comment=\"Working with Queries in Django - Lab\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2Xo7VXs4ULYGC5a4vo0dkBjEfwU\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"autoscrollToSource\" value=\"true\" />\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n    <option name=\"sortByType\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"last_opened_file_path\": \"C:/Users/Lenovo/Downloads/WorkingWithQueriesInDjangoExercise\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Lenovo\\PycharmProjects\\SoftUni-Software-University\\Python DB\\PythonORM\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"00b58237-56e8-4150-86fd-fa4b0bb37029\" name=\"Changes\" comment=\"Working with Queries in Django - Lab\" />\r\n      <created>1699283607001</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1699283607001</updated>\r\n      <workItem from=\"1699283607002\" duration=\"23000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Working with Queries in Django - Lab\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Working with Queries in Django - Lab\" />\r\n  </component>\r\n</project>
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -1,7 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="00b58237-56e8-4150-86fd-fa4b0bb37029" name="Changes" comment="Working with Queries in Django - Lab" />
++    <list default="true" id="00b58237-56e8-4150-86fd-fa4b0bb37029" name="Changes" comment="Working with Queries in Django - Exercise">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -32,7 +34,7 @@
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "WebServerToolWindowFactoryState": "false",
+-    "last_opened_file_path": "C:/Users/Lenovo/Downloads/WorkingWithQueriesInDjangoExercise",
++    "last_opened_file_path": "C:/Users/Lenovo/Downloads/01. The Lecturer_Skeleton/DjangoModelsRelationsLab",
+     "vue.rearranger.settings.migration": "true"
+   }
+ }]]></component>
+@@ -50,7 +52,17 @@
+       <option name="presentableId" value="Default" />
+       <updated>1699283607001</updated>
+       <workItem from="1699283607002" duration="23000" />
++      <workItem from="1699289078132" duration="145000" />
++      <workItem from="1699361563234" duration="46000" />
+     </task>
++    <task id="LOCAL-00001" summary="Working with Queries in Django - Exercise">
++      <created>1699289147686</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1699289147686</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -58,6 +70,7 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Working with Queries in Django - Lab" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Working with Queries in Django - Lab" />
++    <MESSAGE value="Working with Queries in Django - Exercise" />
++    <option name="LAST_COMMIT_MESSAGE" value="Working with Queries in Django - Exercise" />
+   </component>
+ </project>
+\ No newline at end of file
