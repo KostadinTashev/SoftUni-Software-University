@@ -1,0 +1,31 @@
+body,
+ul,
+li {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 27%;
+}
+
+body {
+    margin: 50px;
+}
+
+
+li {
+    margin: 10px;
+    border: 5px solid black;
+    justify-content: center;
+    height: 500px;
+    
+}
+
+ul {
+    justify-content: space-between;
+}
+
+img {
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    top: auto;
+}

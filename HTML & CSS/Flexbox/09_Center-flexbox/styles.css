@@ -1,0 +1,21 @@
+body {
+    background: rgb(238, 238, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    width: 360px;
+    height: 150px;
+    position: absolute;
+    top: 268px;
+    box-shadow: 1px 1px 8px 1px black;
+}
+
+h3,
+p {
+    margin: 10px;
+}

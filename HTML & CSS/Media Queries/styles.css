@@ -1,0 +1,31 @@
+h1 {
+    color: red;
+    font-size: 24px;
+}
+
+@media print {
+    h1 {
+        color: blue;
+        font-size: 48px;
+    }
+}
+
+@media screen and (width:600px) {
+    h1 {
+        color: yellow;
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    h1 {
+        color: orange;
+        font-size: 50px;
+    }
+}
+
+@media (orientation:landscape){
+    h1{
+        font-weight: bold;
+    }
+}

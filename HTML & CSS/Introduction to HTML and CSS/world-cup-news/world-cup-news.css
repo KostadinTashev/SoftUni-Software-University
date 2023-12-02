@@ -1,8 +1,8 @@
 #wrapper {
     width: 700px;
     height: 730px;
-    margin: auto;
     border: 1px solid #000000;
+    margin: auto;
     padding: 10px 20px;
     background-color: #a6e1ec;
 }
@@ -15,7 +15,7 @@ img {
 
 .text {
     color: #3f51b5;
-
+    
 }
 
 li {
