@@ -1,6 +1,11 @@
+import datetime
+from datetime import date
 from enum import Enum
 
 from django.db import models
+from django.urls import reverse
+
+from models_demo.web.validators import validate_in_the_past
 
 
 # class EmployeeLevel(Enum):
@@ -9,16 +14,43 @@ from django.db import models
 #     SENIOR = 'Senior'
 
 
-class Department(models.Model):
+class AuditInfoMixin(models.Model):
+    class Meta:
+        # 1. No table will be created in the DB
+        # 2. Can be inherited in other models
+        abstract = True
+
+    # This will be automatically set on creation
+    created_on = models.DateTimeField(
+        auto_now_add=True,  # optional
+    )
+
+    # This will be automatically set on each `save`/`update`
+    updated_on = models.DateTimeField(
+        auto_now=True,  # optional
+    )
+
+
+class Department(AuditInfoMixin, models.Model):
     name = models.CharField(
         max_length=15,
+    )
+    slug = models.SlugField(
+        unique=True,
     )
 
     def __str__(self):
         return f'Name: {self.name}'
 
+    def get_absolute_url(self):
+        url = reverse('department details', kwargs={
+            'pk': self.pk,
+            'slug': self.slug,
+        })
+        return url
 
-class Project(models.Model):
+
+class Project(AuditInfoMixin, models.Model):
     name = models.CharField(
         max_length=30,
     )
@@ -32,7 +64,10 @@ class Project(models.Model):
         return f'{self.name}'
 
 
-class Employee(models.Model):
+class Employee(AuditInfoMixin, models.Model):
+    class Meta:
+        ordering = ('years_of_experience', '-age',)
+
     LEVEL_JUNIOR = 'Junior'
     LEVEL_REGULAR = 'Regular'
     LEVEL_SENIOR = 'Senior'
@@ -65,25 +100,16 @@ class Employee(models.Model):
 
     review = models.TextField()
 
-    start_date = models.DateField()
+    start_date = models.DateField(
+        validators=(validate_in_the_past,)
+    )
 
     email = models.EmailField(
         unique=True,
-        editable=False,
     )
 
     is_full_time = models.BooleanField(
         null=True,
-    )
-
-    # This will be automatically set on creation
-    created_on = models.DateTimeField(
-        auto_now_add=True,  # optional
-    )
-
-    # This will be automatically set on each `save`/`update`
-    updated_on = models.DateTimeField(
-        auto_now=True,  # optional
     )
 
     department = models.ForeignKey(
@@ -98,6 +124,10 @@ class Employee(models.Model):
     @property
     def full_name(self):
         return f'{self.first_name} {self.last_name}'
+
+    @property
+    def years_of_employment(self):
+        return date.today() - self.start_date
 
     def __str__(self):
         return f'Id: {self.pk}; Name: {self.full_name}'
@@ -131,6 +161,9 @@ class NullBlankDemo(models.Model):
 
 
 class Category(models.Model):
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(
         max_length=15,
     )

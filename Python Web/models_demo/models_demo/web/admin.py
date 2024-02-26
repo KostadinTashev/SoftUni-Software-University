@@ -5,7 +5,7 @@ from models_demo.web.models import Employee, NullBlankDemo, Department, Project,
 
 @admin.register(Department)
 class DepartmentAdmin(admin.ModelAdmin):
-    pass
+    prepopulated_fields = {'slug': ("name",)}
 
 
 @admin.register(Employee)
@@ -21,7 +21,7 @@ class EmployeeAdmin(admin.ModelAdmin):
         (
             'Personal Info',
             {
-                'fields': ('first_name', 'last_name', 'age'),
+                'fields': ('first_name', 'last_name', 'age', 'email'),
             }
         ),
         (
