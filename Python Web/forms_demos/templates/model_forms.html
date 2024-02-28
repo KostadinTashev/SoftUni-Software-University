@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Model forms
+{% endblock %}
+
+{% block content %}
+
+    <h3>Default form</h3>
+    <form method="post" action="{% url 'model forms' %}">
+        {{ form }}
+        {% csrf_token %}
+        <button>Create</button>
+        {#    <input type="submit" value="Send name">#}
+    </form>
+
+    <h3>Customized form</h3>
+    <form method="post" action="{% url 'model forms' %}">
+        {% for field in form %}
+            <label for="{{ field.id_for_label }}">
+                <strong>{{ field.label }}</strong>
+                {{ field }}
+            </label>
+        {% endfor %}
+        {% csrf_token %}
+        <button>Create</button>
+        {#    <input type="submit" value="Send name">#}
+    </form>
+{% endblock %}
