@@ -1,0 +1,24 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+{% block content %}
+    <h2>Current Events</h2>
+    <section id="dashboard">
+        {% if not events %}
+            <h4>There are no Events in the Dashboard!</h4>
+        {% else %}
+            {% for event in events %}
+                <div class="event">
+                    <img src="{{ event.event_image }}"
+                         alt="{{ event.event_name }}"/>
+                    <div class="event-details">
+                        <p class="title">
+                            {{ event.event_name }}
+                        </p>
+                        <p class="date">{{ event.date }}</p>
+                    </div>
+                    <a class="details-btn" href="{% url 'details event' pk=event.pk %}">Details</a>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </section>
+{% endblock %}

@@ -2,13 +2,11 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-w+axnl=9s5c-o(vla099=gs=&5%qql#b#u%(zxwjoff(90!1#_'
+SECRET_KEY = 'django-insecure-xpr-u2upea+(f=g&07c&l2@vysh7hbwasc&-72x^nyvjil^bx+'
 
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -18,7 +16,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'fruitipedia_app.web'
+    'fruitipedia_app.web',
 ]
 
 MIDDLEWARE = [

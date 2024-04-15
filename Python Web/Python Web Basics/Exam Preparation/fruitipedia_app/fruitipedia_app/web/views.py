@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 
-from fruitipedia_app.web.forms import ProfileCreateForm, FruitCreateForm
+from fruitipedia_app.web.forms import CreateProfileForm, CreateFruitForm, EditFruitForm, DeleteFruitForm, \
+    EditProfileForm, DeleteProfileForm
 from fruitipedia_app.web.models import Profile, Fruit
 
 
@@ -12,11 +13,17 @@ def get_profile():
 
 
 def get_fruits():
-    return Fruit.objects.all()
+    try:
+        return Fruit.objects.all()
+    except Fruit.DoesNotExist:
+        return None
 
 
 def get_fruit(pk):
-    return Fruit.objects.get(pk=pk)
+    try:
+        return Fruit.objects.get(pk=pk)
+    except Fruit.DoesNotExist:
+        return None
 
 
 def index(request):
@@ -24,86 +31,140 @@ def index(request):
     context = {
         'profile': profile,
     }
-    return render(request, 'core/index.html', context)
+    return render(request, 'index.html', context)
 
 
 def dashboard(request):
     profile = get_profile()
     fruits = get_fruits()
-
     context = {
         'profile': profile,
         'fruits': fruits,
     }
+    return render(request, 'dashboard.html', context)
 
-    return render(request, 'core/dashboard.html', context)
 
-
-def create_fruit(request):
+def add_fruit(request):
     profile = get_profile()
-
     if request.method == 'GET':
-        form = FruitCreateForm()
+        form = CreateFruitForm()
     else:
-        form = FruitCreateForm(request.POST)
+        form = CreateFruitForm(request.POST)
         if form.is_valid():
             form.instance.owner = profile
             form.save()
-        return redirect('dashboard')
-
+            return redirect('dashboard')
     context = {
         'profile': profile,
         'form': form,
     }
-
-    return render(request, 'fruit/create-fruit.html', context)
+    return render(request, 'create-fruit.html', context)
 
 
 def details_fruit(request, pk):
     profile = get_profile()
-    fruit = get_fruit(pk=pk)
-
+    fruit = get_fruit(pk)
     context = {
         'profile': profile,
         'fruit': fruit,
     }
-
-    return render(request, 'fruit/details-fruit.html', context)
+    return render(request, 'details-fruit.html', context)
 
 
 def edit_fruit(request, pk):
-    return render(request, 'fruit/edit-fruit.html')
+    profile = get_profile()
+    fruit = get_fruit(pk)
+    if request.method == 'GET':
+        form = EditFruitForm(instance=fruit)
+    else:
+        form = EditFruitForm(request.POST, instance=fruit)
+        if form.is_valid():
+            form.save()
+            return redirect('dashboard')
+    context = {
+        'profile': profile,
+        'fruit': fruit,
+        'form': form,
+    }
+    return render(request, 'edit-fruit.html', context)
 
 
 def delete_fruit(request, pk):
-    return render(request, 'fruit/delete-fruit.html')
-
-
-def create_profile(request):
     profile = get_profile()
+    fruit = get_fruit(pk)
     if request.method == 'GET':
-        form = ProfileCreateForm()
+        form = DeleteFruitForm(instance=fruit)
     else:
-        form = ProfileCreateForm(request.POST)
+        form = DeleteFruitForm(request.POST, instance=fruit)
         if form.is_valid():
             form.save()
-        return redirect('dashboard')
+            fruit.delete()
+            return redirect('dashboard')
+    context = {
+        'profile': profile,
+        'fruit': fruit,
+        'form': form,
+    }
+    return render(request, 'delete-fruit.html', context)
 
+
+def add_profile(request):
+    profile = get_profile()
+    if request.method == 'GET':
+        form = CreateProfileForm()
+    else:
+        form = CreateProfileForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('dashboard')
     context = {
         'profile': profile,
         'form': form,
     }
-
-    return render(request, 'profile/create-profile.html', context)
+    return render(request, 'create-profile.html', context)
 
 
 def details_profile(request):
-    return render(request, 'profile/details-profile.html')
+    profile = get_profile()
+    fruits = get_fruits().count()
+    context = {
+        'profile': profile,
+        'fruits': fruits,
+    }
+    return render(request, 'details-profile.html', context)
 
 
 def edit_profile(request):
-    return render(request, 'profile/edit-profile.html')
+    profile = get_profile()
+    if request.method == 'GET':
+        form = EditProfileForm(instance=profile)
+    else:
+        form = EditProfileForm(request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            return redirect('details profile')
+    context = {
+        'profile': profile,
+        'form': form,
+    }
+    return render(request, 'edit-profile.html', context)
 
 
 def delete_profile(request):
-    return render(request, 'profile/delete-profile.html')
+    profile = get_profile()
+    fruits = get_fruits()
+    if request.method == 'GET':
+        form = DeleteProfileForm(instance=profile)
+    else:
+        form = DeleteProfileForm(request.POST, instance=profile)
+        form.save()
+        for fruit in fruits:
+            fruit_form = DeleteFruitForm(request.POST, instance=fruit)
+            fruit_form.save()
+        return redirect('index')
+    context = {
+        'profile': profile,
+        'fruits': fruits,
+        'form': form,
+    }
+    return render(request, 'delete-profile.html', context)
