@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    {% if not recipes %}
+        <p class="no-articles">There are currently no recipes available.</p>
+    {% else %}
+        <section id="catalogue">
+        {% for recipe in recipes %}
+            <div class="recipe-card">
+                <div class="image-wrap">
+                    <img
+                            class="recipe-img"
+                            src="
+                            {% if recipe.image_url %}
+                            {{ recipe.image_url }}
+                            {% else %}
+                            {% static 'images/default_recipe_img.png' %}
+                            {% endif %}"
+                            alt="recipe image"
+                    />
+                </div>
+                <h3>{{ recipe.title }}</h3>
+                <h1>Cooking time: {{ recipe.cooking_time }}min.</h1>
+                <h1>{{ recipe.instructions|slice:":35" }}</h1>
+                <div class="details-buttons">
+                    <a href="{% url 'details recipe' recipe_id=recipe.pk %}" class="details-btn">Details</a>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+</section>
+{% endblock %}
