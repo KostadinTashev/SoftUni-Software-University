@@ -1,4 +1,4 @@
-total_pages= int(input())
+total_pages = int(input())
 pages_hour = int(input())
 days = int(input())
 
