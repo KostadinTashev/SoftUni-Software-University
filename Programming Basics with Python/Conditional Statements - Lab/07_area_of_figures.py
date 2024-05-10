@@ -1,13 +1,14 @@
 from math import pi
+
 type_fig = input()
 if type_fig == 'square':
     a = float(input())
-    area_squ = a*a
+    area_squ = a * a
     print(area_squ)
 elif type_fig == 'rectangle':
     a = float(input())
     b = float(input())
-    area_rec = a*b
+    area_rec = a * b
     print(area_rec)
 elif type_fig == 'circle':
     r = float(input())

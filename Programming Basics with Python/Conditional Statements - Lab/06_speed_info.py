@@ -7,5 +7,5 @@ elif (speed > 50) and (speed <= 150):
     print("fast")
 elif (speed > 150) and (speed <= 1000):
     print("ultra fast")
-elif (speed >1000):
+elif (speed > 1000):
     print("extremely fast")
