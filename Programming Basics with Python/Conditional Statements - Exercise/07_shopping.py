@@ -13,7 +13,7 @@ if videocards_count > procesors_count:
     total_price = total_price * 0.85
 
 diff = abs(total_price - budget)
-if budget >= total_price :
+if budget >= total_price:
     print(f"You have {diff:.2f} leva left!")
 else:
     print(f"Not enough money! You need {diff:.2f} leva more!")

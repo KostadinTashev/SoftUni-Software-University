@@ -18,7 +18,6 @@ if total_toys >= 50:
 
 total_price = total_price * 0.9
 
-
 diff = abs(trip_price - total_price)
 if trip_price <= total_price:
     print(f"Yes! {diff:.2f} lv left.")

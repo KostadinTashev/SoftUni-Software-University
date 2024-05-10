@@ -15,4 +15,3 @@ elif num % 10 == 5:
 
 print(bonus_points)
 print(bonus_points + num)
-

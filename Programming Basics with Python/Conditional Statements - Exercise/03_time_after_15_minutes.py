@@ -12,4 +12,4 @@ if hours > 23:
 if minutes <= 9:
     print(f"{hours}:0{minutes}")
 else:
-    print((f"{hours}:{minutes}"))
+    print(f"{hours}:{minutes}")
