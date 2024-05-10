@@ -1,8 +1,13 @@
 w = float(input())
 h = float(input())
 
-h_seats = (h - 1) // 0.7
-w_seats = w / 1.2
-work_places = w_seats * h_seats - 3
-num = int(work_places)
-print(num)
+w_cm = w * 100
+h_cm = h * 100
+
+rows = w_cm // 120
+available_width = h_cm - 100
+cols = available_width // 70
+
+total_seats = rows * cols
+final_seats = int(total_seats - 3)
+print(final_seats)
