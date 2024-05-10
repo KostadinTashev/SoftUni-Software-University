@@ -12,4 +12,3 @@ if all_hours >= hours:
     print(f"Yes!{math.floor(diff)} hours left.")
 else:
     print(f"Not enough time!{math.ceil(diff)} hours needed.")
-
