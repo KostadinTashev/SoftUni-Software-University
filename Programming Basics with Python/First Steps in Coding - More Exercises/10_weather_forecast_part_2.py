@@ -1,5 +1,5 @@
 temp = float(input())
-if (temp >= 26.00) and (temp <=35.00):
+if (temp >= 26.00) and (temp <= 35.00):
     print('Hot')
 elif (temp >= 20.1) and (temp <= 25.9):
     print('Warm')

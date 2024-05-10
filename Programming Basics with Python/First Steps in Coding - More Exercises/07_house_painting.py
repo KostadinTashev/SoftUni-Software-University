@@ -3,7 +3,7 @@ y = float(input())
 h = float(input())
 
 predna = x * x * 2 - (1.2 * 2)
-stranichna = x * y * 2 - (1.5 * 1.5 * 2 )
+stranichna = x * y * 2 - (1.5 * 1.5 * 2)
 obshto = predna + stranichna
 green_paint = obshto / 3.4
 

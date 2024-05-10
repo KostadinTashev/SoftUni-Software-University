@@ -1,4 +1,5 @@
 from math import pi
+
 r = float(input())
 calc_area = pi * r * r
 calc_perim = 2 * pi * r

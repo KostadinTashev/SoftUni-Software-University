@@ -1,13 +1,13 @@
-price_skum = float(input())
-price_caca = float(input())
+price_mackerel = float(input())
+price_sprinkle = float(input())
 kg_pal = float(input())
 kg_saf = float(input())
 kg_midi = int(input())
 
-price_pal = price_skum * 1.60
+price_pal = price_mackerel * 1.60
 sum_pal = kg_pal * price_pal
 
-price_saf = price_caca * 1.8
+price_saf = price_sprinkle * 1.8
 sum_saf = kg_saf * price_saf
 
 sum_midi = kg_midi * 7.50
