@@ -1,6 +1,6 @@
 day = int(input())
 room = input()
-ocenka = input()
+grade = input()
 price = 0
 
 if day < 10:
@@ -26,9 +26,9 @@ elif day > 15:
     elif room == "president apartment":
         price = (35 * (day - 1) * 0.8)
 
-if ocenka == "positive":
+if grade == "positive":
     price = price * 1.25
-elif ocenka == "negative":
+elif grade == "negative":
     price = price * 0.9
 
 print(f"{price:.2f}")

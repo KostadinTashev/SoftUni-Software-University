@@ -21,7 +21,7 @@ if exam_time_min < arrival_time_min:
         print(f"{diff_min} minutes after the start")
 elif exam_time_min == arrival_time_min or diff_min <= 30:
     print("On time")
-    if diff_min >= 1 and diff_min <= 30:
+    if 1 <= diff_min <= 30:
         print(f"{diff_min} minutes before the start")
 else:
     print("Early")

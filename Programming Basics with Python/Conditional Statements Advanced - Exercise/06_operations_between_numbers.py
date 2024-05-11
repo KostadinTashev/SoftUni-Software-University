@@ -2,6 +2,7 @@ n1 = int(input())
 n2 = int(input())
 operator = input()
 even_odd = ""
+result = 0
 if operator == "+" or operator == "-" or operator == "*":
     if operator == "+":
         result = n1 + n2

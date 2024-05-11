@@ -5,7 +5,7 @@ price_apart = 0
 if month == "May" or month == "October":
     price_studio = 50 * days
     price_apart = 65 * days
-    if days > 7 and days <= 14:
+    if 7 < days <= 14:
         price_studio = 0.95 * price_studio
     elif days > 14:
         price_studio = 0.70 * price_studio

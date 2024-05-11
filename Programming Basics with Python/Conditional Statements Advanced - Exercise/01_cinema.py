@@ -12,6 +12,6 @@ elif type_tickets == "Normal":
 elif type_tickets == "Discount":
     price = 5
 
-sum = price * all_seats
+total_sum = price * all_seats
 
-print(f"{sum:.2f} leva")
+print(f"{total_sum:.2f} leva")

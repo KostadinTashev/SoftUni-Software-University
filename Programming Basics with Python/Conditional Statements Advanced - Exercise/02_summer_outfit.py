@@ -4,30 +4,30 @@ time_of_day = input()
 outfit = ""
 shoes = ""
 if time_of_day == "Morning":
-    if degrees >= 10 and degrees <= 18:
+    if 10 <= degrees <= 18:
         outfit = "Sweatshirt"
         shoes = "Sneakers"
-    elif degrees > 18 and degrees <= 24:
+    elif 18 < degrees <= 24:
         outfit = "Shirt"
         shoes = "Moccasins"
     elif degrees > 24:
         outfit = "T-Shirt"
         shoes = "Sandals"
 elif time_of_day == "Afternoon":
-    if degrees >= 10 and degrees <= 18:
+    if 10 <= degrees <= 18:
         outfit = "Shirt"
         shoes = "Moccasins"
-    elif degrees > 18 and degrees <= 24:
+    elif 18 < degrees <= 24:
         outfit = "T-Shirt"
         shoes = "Sandals"
     elif degrees > 24:
         outfit = "Swim Suit"
         shoes = "Barefoot"
 elif time_of_day == "Evening":
-    if degrees >= 10 and degrees <= 18:
+    if 10 <= degrees <= 18:
         outfit = "Shirt"
         shoes = "Moccasins"
-    elif degrees > 18 and degrees <= 24:
+    elif 18 < degrees <= 24:
         outfit = "Shirt"
         shoes = "Moccasins"
     elif degrees > 24:
