@@ -12,4 +12,3 @@ if x_condition or y_condition:
     print('Border')
 else:
     print('Inside / Outside')
-    
