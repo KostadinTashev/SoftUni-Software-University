@@ -3,7 +3,8 @@ day_of_the_week = input()
 quantity = float(input())
 price = 0
 
-if day_of_the_week == "Monday" or day_of_the_week == "Tuesday" or day_of_the_week == "Wednesday" or day_of_the_week == "Thursday" or day_of_the_week == "Friday":
+if (day_of_the_week == "Monday" or day_of_the_week == "Tuesday" or day_of_the_week == "Wednesday"
+        or day_of_the_week == "Thursday" or day_of_the_week == "Friday"):
     if fruit == "banana":
         price = quantity * 2.50
     elif fruit == "apple":

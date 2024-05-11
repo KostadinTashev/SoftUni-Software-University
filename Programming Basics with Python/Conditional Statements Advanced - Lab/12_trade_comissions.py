@@ -4,7 +4,7 @@ com = 0
 city_check = 0
 if city == "Sofia":
     if 0 <= qty_sold <= 500:
-       com = qty_sold * 0.05
+        com = qty_sold * 0.05
     elif 500 < qty_sold <= 1000:
         com = qty_sold * 0.07
     elif 1000 < qty_sold <= 10000:
@@ -15,7 +15,7 @@ if city == "Sofia":
         com = "invalid"
 elif city == "Varna":
     if 0 <= qty_sold <= 500:
-       com = qty_sold * 0.045
+        com = qty_sold * 0.045
     elif 500 < qty_sold <= 1000:
         com = qty_sold * 0.075
     elif 1000 < qty_sold <= 10000:
@@ -26,7 +26,7 @@ elif city == "Varna":
         com = "invalid"
 elif city == "Plovdiv":
     if 0 <= qty_sold <= 500:
-       com = qty_sold * 0.055
+        com = qty_sold * 0.055
     elif 500 < qty_sold <= 1000:
         com = qty_sold * 0.08
     elif 1000 < qty_sold <= 10000:
