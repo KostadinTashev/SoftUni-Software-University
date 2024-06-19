@@ -1,6 +1,6 @@
 some_text = input()
 sum_of_points = 0
-for letter in some_text: #text_lenght = len(text)
+for letter in some_text:  # text_length = len(text)
     if letter == "a":
         sum_of_points += 1
     elif letter == "e":
