@@ -4,7 +4,7 @@ total_water = 0
 total_internet = 0
 total_others = 0
 average_price = 0
-for current_month in range (month):
+for current_month in range(month):
     electricity = float(input())
     water = 20
     internet = 15

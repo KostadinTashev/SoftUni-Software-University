@@ -1,4 +1,4 @@
-broi_hodove = int(input())
+number_of_moves = int(input())
 init_points = 0
 between_0_9 = 0
 between_10_19 = 0
@@ -7,7 +7,7 @@ between_30_39 = 0
 between_40_50 = 0
 invalid = 0
 sum = 0
-for hod in range(broi_hodove):
+for hod in range(number_of_moves):
     current_hod = int(input())
     if 0 <= current_hod <= 9:
         sum += 0.2 * current_hod
@@ -27,12 +27,12 @@ for hod in range(broi_hodove):
     else:
         sum /= 2
         invalid += 1
-p1_percent = between_0_9 / broi_hodove * 100
-p2_percent = between_10_19 / broi_hodove * 100
-p3_percent = between_20_29 / broi_hodove * 100
-p4_percent = between_30_39 / broi_hodove * 100
-p5_percent = between_40_50 / broi_hodove * 100
-p6_percent = invalid / broi_hodove * 100
+p1_percent = between_0_9 / number_of_moves * 100
+p2_percent = between_10_19 / number_of_moves * 100
+p3_percent = between_20_29 / number_of_moves * 100
+p4_percent = between_30_39 / number_of_moves * 100
+p5_percent = between_40_50 / number_of_moves * 100
+p6_percent = invalid / number_of_moves * 100
 print(f"{sum:.2f}")
 print(f"From 0 to 9: {p1_percent:.2f}%")
 print(f"From 10 to 19: {p2_percent:.2f}%")

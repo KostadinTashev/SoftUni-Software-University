@@ -11,7 +11,7 @@ for i in range(1, n + 1):
     num = float(input())
 
     if i % 2 == 0:
-        evenSum +=  num
+        evenSum += num
 
         if num > evenMax:
             evenMax = num
