@@ -10,7 +10,7 @@ for i in range(1, count_tabs + 1):
     elif name_web == "Instagram":
         copy_salary = copy_salary - 100
     elif name_web == "Reddit":
-        copy_salary = copy_salary  - 50
+        copy_salary = copy_salary - 50
 
     if copy_salary <= 0:
         break
