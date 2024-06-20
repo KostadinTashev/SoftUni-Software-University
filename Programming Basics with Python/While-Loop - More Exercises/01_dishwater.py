@@ -23,6 +23,3 @@ if command == "End":
     print("Detergent was enough!")
     print(f"{dishes_count} dishes and {pots_count} pots were washed.")
     print(f"Leftover detergent {diff} ml.")
-
-
-
