@@ -5,4 +5,4 @@ for i in range(1, 10):
             for l in range(1, 10):
                 if i + j == k + l:
                     if n % (i + j) == 0:
-                        print(f"{i}{j}{k}{l}", end= " ")
+                        print(f"{i}{j}{k}{l}", end=" ")

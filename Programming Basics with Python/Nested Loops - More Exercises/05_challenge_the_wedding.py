@@ -9,8 +9,6 @@ for i in range(1, men + 1):
         couples += f"({i} <-> {j}) "
         if counter == tables:
             break
-
     if counter == tables:
         break
-
 print(couples)

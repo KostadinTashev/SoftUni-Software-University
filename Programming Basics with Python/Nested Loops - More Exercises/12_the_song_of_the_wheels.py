@@ -30,4 +30,3 @@ if counter < 4:
 if flag:
     print()
     print(f"Password: {password_first_number}{password_second_number}{password_third_number}{password_forth_number}")
-
